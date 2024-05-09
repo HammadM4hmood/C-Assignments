@@ -1,2 +1,3 @@
 # C-Assignments
-C# Assignments that were givien in class
+
+This repository will be a list of any in class assignment that were given 
