@@ -1,0 +1,61 @@
+using System;
+using System.Data;
+using System.Net.NetworkInformation;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+
+namespace BasicPracticeQuestions
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Exercise 1: Simple Arithmetic:
+            Create an integer variable to hold the number 10.
+            Create another integer variable to hold the number 20.
+            Print the sum of the two integers.
+
+            Exercise 2: User Input:
+            Ask the user to enter their name, and store it in a string variable.
+            Greet the user by printing, "Hello, [Name]!"
+
+            Exercise 3: Variable Type Conversion:
+            Create a string variable with a numeric value, like "123".
+            Convert this string into an integer variable.
+            Print the new integer value.
+
+            Exercise 4: Constant Declaration:
+            Declare a constant floating-point variable for the value of Pi(3.14159).
+            Calculate the circumference of a circle given a radius of 5 units using this constant.
+            Print the circumference.*/
+
+            // Ex. 1 Simple Arithmetic
+            int num = 10;int num2 = 20;
+            Console.WriteLine(num + num2);
+
+            // Ex. 2 User Input
+            Console.WriteLine("Enter Name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello " + name);
+
+            // Ex. 3 Varible Type Conversion
+            string numString = "123";
+            int numInt = Convert.ToInt32(numString);
+            Console.WriteLine(numInt);
+
+            // Ex. 4 Constant Arithmetic
+            const double PI = 3.14159;
+
+            // Getting radius
+            Console.WriteLine("Enter the radius: ");
+            string radius = Console.ReadLine();
+
+            // Calculating Circumference
+            Console.WriteLine(2 * PI * Convert.ToInt32(radius));
+
+            Console.ReadLine();
+
+        }
+    }
+}
