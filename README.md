@@ -1,3 +1,3 @@
-# C-Assignments
+# C# Exercises
 
-This repository will be a list of any in class assignment that were given 
+This repository will be a list of any in class exercises that were given 
