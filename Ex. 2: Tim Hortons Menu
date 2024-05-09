@@ -1,0 +1,67 @@
+using System;
+using System.Data;
+using System.Net.NetworkInformation;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+
+namespace BasicPracticeQuestions
+{
+    internal class Program
+    {
+        static void BreakFastMenu(string[] options)
+        {
+            int x = 1;
+            for (int i = 0; i < options.Length; i++)
+            {
+                Console.WriteLine(x + ". " + options[i]);
+                x++;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            // Create a menu for Time Hortons and using switch statements and loops
+            // Print the total at the end
+
+            double total = 0;
+
+            string[] menuOptions = { "Coffee ($2.00)", "Bagel ($2.00)", "Muffins ($3.00)", "Croissant ($3.00)", ("Exit")};
+
+            BreakFastMenu(menuOptions);
+            int userSelection = Convert.ToInt32(Console.ReadLine());
+
+
+            while (userSelection != 5) 
+            {
+                switch (userSelection)
+                {
+                    case 1:
+                        Console.WriteLine("Coffee Added");
+                        total += 2;
+                        break;
+                    case 2:
+                        Console.WriteLine("Bagel Added");
+                        total += 2;
+                        break;
+                    case 3:
+                        Console.WriteLine("Muffin Added");
+                        total += 3;
+                        break;
+                    case 4:
+                        Console.WriteLine("Croissant Added");
+                        total += 3;
+                        break;
+                    default:
+                        Console.WriteLine("That was not an option. Please try again");
+                        userSelection = Convert.ToInt32(Console.ReadLine());
+                        break;
+                }
+                BreakFastMenu(menuOptions);
+                userSelection = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("Your total comes to $" + total);
+            Console.ReadLine();
+        }
+    }
+}
